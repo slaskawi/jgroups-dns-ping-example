@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2016-12-20T12:53:05Z
+  labels:
+    group: org.infinispan
+    project: jgroups-dns-ping
+    provider: fabric8
+    version: 1.0.0-SNAPSHOT
+  name: jgroups-dns-ping
+  namespace: myproject
+  resourceVersion: "19262"
+  selfLink: /api/v1/namespaces/myproject/services/jgroups-dns-ping
+  uid: 3fa8fcdb-c6b3-11e6-bfce-54ee751d46e3
+spec:
+  clusterIP: None
+  ports:
+  - port: 8888
+    protocol: TCP
+    targetPort: 8888
+  selector:
+    group: org.infinispan
+    project: jgroups-dns-ping
+    provider: fabric8
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
