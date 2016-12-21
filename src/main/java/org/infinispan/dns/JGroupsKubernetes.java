@@ -22,6 +22,8 @@ public class JGroupsKubernetes {
       InputStream configuration = JGroupsKubernetes.class.getResourceAsStream("/config-test.xml");
       JChannel channel = new JChannel(configuration);
 
+      System.out.println("#### " + channel.getProtocolStack().getProtocols());
+
       channel.setReceiver(new ReceiverAdapter(){
          @Override
          public void viewAccepted(View view) {
