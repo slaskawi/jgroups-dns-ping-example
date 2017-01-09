@@ -8,6 +8,11 @@
 * Scale the pods `oc scale dc jgroups-dns-ping --replicas=5`.
 * Verify logs `oc logs po/...`. A new view should be installed.
 
+# Testing SRV Entries
+
+* Switch to `config-test-srv.xml` configuration
+* Note that discovery is now performed using SRV entries
+
 # Debugging
 
 * Use RHEL image with diagnosis tools: `oc run rheltest --image=registry.access.redhat.com/rhel7/rhel-tools --restart=Never --attach -i --tty`.
