@@ -19,7 +19,7 @@ public class JGroupsKubernetes {
       rootLog.setLevel( Level.FINE );
       rootLog.getHandlers()[0].setLevel( Level.FINE );
 
-      InputStream configuration = JGroupsKubernetes.class.getResourceAsStream("/config-test.xml");
+      InputStream configuration = JGroupsKubernetes.class.getResourceAsStream("/config-test-srv.xml");
       JChannel channel = new JChannel(configuration);
 
       System.out.println("#### " + channel.getProtocolStack().getProtocols());

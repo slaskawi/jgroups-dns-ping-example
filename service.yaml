@@ -15,10 +15,10 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - port: 8888
+  - port: 4444
     name: ping
     protocol: TCP
-    targetPort: 8888
+    targetPort: 4444
   selector:
     group: org.infinispan
     project: jgroups-dns-ping
